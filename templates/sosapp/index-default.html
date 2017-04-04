@@ -47,7 +47,7 @@
     <link rel="stylesheet" href="{% static 'sosapp/assets/horizon-swiper-dist/horizon-swiper.min.css' %}">
     <link rel="stylesheet" href="{% static 'sosapp/assets/horizon-swiper-dist/horizon-theme.min.css' %}">
 	<link rel="stylesheet" href="{% static 'sosapp/assets/css/additional.css' %}">
-    <link rel="stylesheet" href="{% static 'sosapp/assets/css/ql-reset.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'sosapp/assets/css/ql-reset.css' %}"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,10 +57,10 @@
     <![endif]-->
 
 	<!-- Main Quill library -->
-	<script src="//cdn.quilljs.com/1.1.7/quill.min.js"></script>
+	<!-- <script src="//cdn.quilljs.com/1.1.7/quill.min.js"></script> -->
 
 	<!-- Theme included stylesheets -->
-	<link href="//cdn.quilljs.com/1.1.7/quill.snow.css" rel="stylesheet">
+	<!-- <link href="//cdn.quilljs.com/1.1.7/quill.snow.css" rel="stylesheet"> -->
 
 
 
@@ -290,8 +290,8 @@
 						<a href="{% url 'sos:exp_stories' %}">View All</a>
 						  </div>
 						  {% else %}
-						  <p>Please Login For More Options!</p>
-						  {% endif %}
+						  <p>Please <a href="/accounts/facebook/login/" >Login</a> For More Options!</p>
+						  {% endif %}	
 						</div>
 		       	</div>
 	       </div>
@@ -607,9 +607,9 @@
 	   	   		</div>
 	   	   	</div>
 	   	   	<div class="row">
-	   	   		<div class="col-md-3 col-sm-6">
+	   	   		<div class="col-md-offset-1 col-md-3 col-sm-6">
 	   	   			<div class="member-block wow animated fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
-	   	   				<img class="img-responsive" src="https://goo.gl/nQsCD7'" alt="member image">
+	   	   				<img class="img-responsive" src="{%static 'sosapp/images/khushbu.png' %}" alt="member image">
 
 	   	   				<span class="member-name">
 	   	   					Khushbu Parakh
@@ -624,7 +624,7 @@
 		   	   				<span class="member-designation">
 		   	   					Developer
 		   	   				</span><!-- /.member-designation -->
-		   	   				<p>Khushbu is a women activist based in India. She is currently studying IT.</p>
+		   	   				<p>Khushbu is a women activist based in India. She is currently studying IT and Computer Science.</p>
 		   	   				<ul class="social-icon pull-left">
 	       	    				<li><a href="https://www.facebook.com/khushbu.parakh"><i class="fa fa-facebook"></i></a></li>
 	       	    				<li><a href="https://twitter.com/Khushbuparakh"><i class="fa fa-twitter"></i></a></li>
@@ -652,7 +652,7 @@
 		   	   				<span class="member-designation">
 		   	   					Activist
 		   	   				</span><!-- /.member-designation -->
-		   	   				<p>Jimish is a men activist based in French. <HEAD></HEAD>e is currently studying econmomic as a major.</p>
+		   	   				<p>Jimish is a men activist based in Ahmedabad. <HEAD></HEAD>e is currently studying Information Science as a major.</p>
 		   	   				<ul class="social-icon pull-left">
 	       	    				<li><a href="www.facebook.com/JimishFotariya"><i class="fa fa-facebook"></i></a></li>
 	       	    				<li><a href="www.twitter.com/JimishFotariya"><i class="fa fa-twitter"></i></a></li>
@@ -664,7 +664,7 @@
 	   	   		<div class="col-md-3 col-sm-6">
 	   	   			<div class="member-block wow animated fadeInUp" data-wow-delay="0.7s" data-wow-duration="1s">
 
-	   	   				<img class="img-responsive" src="{% static '' %}" alt="member image">
+	   	   				<img class="img-responsive" src="{%static 'sosapp/images/hitesh.png' %}" alt="member image">
 
 	   	   				<span class="member-name">
 	   	   					Hitesh Garg
@@ -679,7 +679,7 @@
 		   	   				<span class="member-designation">
 		   	   					Feminist
 		   	   				</span><!-- /.member-designation -->
-		   	   				<p>Hitesh is a men activist based in French. He is currently studying econmomic as a major.</p>
+		   	   				<p>Hitesh is a men activist based in Bangalore. He is currently studying Computer Science.</p>
 		   	   				<ul class="social-icon pull-left">
 	       	    				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 	       	    				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -688,32 +688,32 @@
 	   	   				</div><!-- /.member-hover -->
 	   	   			</div><!-- /.member-block -->
 	   	   		</div>
-
+<!-- 
 	   	   		<div class="col-md-3 col-sm-6">
 	   	   			<div class="member-block wow animated fadeInUp" data-wow-delay="0.9s" data-wow-duration="1s">
 	   	   				<img class="img-responsive" src="{% static 'sosapp/images/team_image_04.jpg' %}" alt="member image">
 	   	   				<span class="member-name">
 	   	   					Loshika Niri CHAKMA
-	   	   				</span><!-- /.member-name -->
+	   	   				</span>
 	   	   				<span class="member-designation">
 	   	   					Humanatarian
-	   	   				</span><!-- /.member-designation -->
+	   	   				</span>
 	   	   				<div class="member-hover">
 	   	   					<span class="member-name">
 		   	   					Loshika Niri CHAKMA
-		   	   				</span><!-- /.member-name -->
+		   	   				</span>
 		   	   				<span class="member-designation">
 		   	   					Humanatarian
-		   	   				</span><!-- /.member-designation -->
+		   	   				</span>
 		   	   				<p>Loshika Niri CHAKMA is a women activist based in French. She is currently studying econmomic as a major.</p>
 		   	   				<ul class="social-icon pull-left">
 	       	    				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 	       	    				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 	       	    				<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 	       	    			</ul>
-	   	   				</div><!-- /.member-hover -->
-	   	   			</div><!-- /.member-block -->
-	   	   		</div>
+	   	   				</div>
+	   	   			</div>
+	   	   		</div> -->
 	   	   	</div>
    	   </div>
    </section>
@@ -734,17 +734,17 @@
 		   			    <div class="content-block-right">
 			   			    <div class="counter-box">
 				   				<span class="count-icon"><i class="fa fa-heart-o"></i></span>
-				   				<div class="count"><span class="counter">1589</span></div>
+				   				<div class="count"><span class="counter">15</span></div>
 				   				<span class="count-caption">CAUSES</span>
 				   			</div><!-- /.counter-box -->
 			   				<div class="counter-box">
 				   				<span class="count-icon"><i class="fa fa-map-marker"></i></span>
-				   				<div class="count"><span class="counter">326</span></div>
+				   				<div class="count"><span class="counter">3</span></div>
 				   				<span class="count-caption">PLACES</span>
 				   			</div><!-- /.counter-box -->
 				   			<div class="counter-box">
 				   				<span class="count-icon"><i class="fa fa-angellist"></i></span>
-				   				<div class="count"><span class="counter">1026</span></div>
+				   				<div class="count"><span class="counter">10</span></div>
 				   				<span class="count-caption">COMPLETED</span>
 				   			</div><!-- /.counter-box -->
 		   			    </div><!-- /.content-block-right -->
@@ -875,7 +875,7 @@
     			</div>
     			<div class="col-md-9">
     				<div class="partner-logo fade-green wow fadeInDown">
-    					<a href="#"><img src="{% static 'https://goo.gl/Nggafw' %}" alt="partner logo"></a>
+    					<a href="https://plus.google.com/+AnitaborgOrg"><img src="{% static 'sosapp/images/partner.png'%}" alt="partner logo"></a>
 
     				</div>
     			   <!-- 	<div class="partner-logo wow fadeInDown">
@@ -920,7 +920,7 @@
 								</span>
 								<!-- /.news-reporter end -->
 								<span class="reporter-date">
-									<i class="fa fa-calendar"></i> September 12, 2015
+									<i class="fa fa-calendar"></i> September 12, 2016
 								</span>
 								<!-- /.reporter-date end -->
 							</div><!-- /.news-time -->
@@ -950,7 +950,7 @@
 								</span>
 								<!-- /.news-reporter end -->
 								<span class="reporter-date">
-									<i class="fa fa-calendar"></i> September 12, 2015
+									<i class="fa fa-calendar"></i> September 12, 2016
 								</span>
 								<!-- /.reporter-date end -->
 							</div><!-- /.news-time -->
@@ -979,7 +979,7 @@
 								</span>
 								<!-- /.news-reporter end -->
 								<span class="reporter-date">
-									<i class="fa fa-calendar"></i> September 12, 2015
+									<i class="fa fa-calendar"></i> September 12, 2016
 								</span>
 								<!-- /.reporter-date end -->
 							</div><!-- /.news-time -->
@@ -1064,8 +1064,12 @@
 
    </div>
    <!-- map end -->
-
    <!-- contact-form start -->
+   
+	   <div id="success-contact" style="display: none;" class="wow bounceInDown" align="center" style="margin-top: -300px;">
+	   	<h3>Thank you! We will connect to you soon !</h3>
+	   </div>
+   
    <div id="contact-form" class="contact-form" style="margin-top: -300px;">
    	    <div class="container">
 	   		<div class="row">
@@ -1180,7 +1184,7 @@
    	    				</ul>
    	    			</div>
    	    			<div class="col-sm-6 text-right">
-   	    				<p>© 2015 CodePassenger - Feminist Activism Template By CodePassanger</p>
+   	    				<p>© 2017 sosysters.com - Non-Profit, Charity and Fundraising</p>
    	    			</div>
    	    		</div>
    	    	</div>
@@ -1281,7 +1285,7 @@
     <script src="{% static 'sosapp/assets/js/jquery.validate.min.js' %}"></script>
     <script src="{% static 'sosapp/assets/js/wow.js' %}"></script>
     <script src="{% static 'sosapp/assets/horizon-swiper-dist/horizon-swiper.min.js' %}"></script>
-    <script src="{% static 'sosapp/assets/js/default-data.js' %}"></script>
+    <!-- <script src="{% static 'sosapp/assets/js/default-data.js' %}"></script> -->
     <script src="{% static 'sosapp/assets/js/script.js' %}"></script>
 
 
@@ -1334,7 +1338,7 @@
    			//40.705643, -74.0107624
    		  var mapOptions = {
    			zoom: 17,
-   			center: new google.maps.LatLng(40.7065214,-74.0106551),
+   			center: new google.maps.LatLng(43.7710126,11.2525165),
    			mapTypeControlOptions: {
    		    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
    		   },

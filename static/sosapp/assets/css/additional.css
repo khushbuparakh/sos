@@ -227,3 +227,22 @@ padding: 0px;
    width: 100%;
    border-right: 10px solid #F5143D;
 }
+
+#success-contact{
+    margin:0px;
+    margin-top: -300px;
+    padding: 30px;
+    padding-top: 40px;
+    vertical-align: middle;
+    height: auto;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 5px black;
+
+}
+#success-contact h3{
+  font-family: 'Droid Sans', sans-serif;
+  color: white;
+}

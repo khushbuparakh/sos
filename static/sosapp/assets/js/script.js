@@ -1,3 +1,4 @@
+GLOBALS = {};
 
 $(document).ready(function() {
     "use strict";
@@ -360,23 +361,23 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 ==============================================*/
 
 
-    $('.open-editor').on('click',function(){
-      if( $(this).data('task') == 'report')
-      {
-        $("#editor-model").find(".modal-title").text("Report Once");
-        $("#editor").html( GLOBALS.defaultPostHtml.report );
-        editorInit();
-        $("#editor-model").modal();
-      }
-      else if( $(this).data('task') == "experience" )
-      {
-        $("#editor-model").find(".modal-title").text("I Experienced");
-        $("#editor").html(GLOBALS.defaultPostHtml.experience );
-        editorInit();
-        $("#editor-model").modal();
-      }
-        // window.location = $(this).data('href');
-    });
+    // $('.open-editor').on('click',function(){
+    //   if( $(this).data('task') == 'report')
+    //   {
+    //     $("#editor-model").find(".modal-title").text("Report Once");
+    //     $("#editor").html( GLOBALS.defaultPostHtml.report );
+    //     // editorInit();
+    //     $("#editor-model").modal();
+    //   }
+    //   else if( $(this).data('task') == "experience" )
+    //   {
+    //     $("#editor-model").find(".modal-title").text("I Experienced");
+    //     $("#editor").html(GLOBALS.defaultPostHtml.experience );
+    //     editorInit();
+    //     $("#editor-model").modal();
+    //   }
+    //     // window.location = $(this).data('href');
+    // });
     $(".navigate-me").on('click',function () {
       window.location = $(this).attr('href');
     })
@@ -387,7 +388,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 =            contact form submission            =
 ===============================================*/
 
-
+// $("#contact-form").hide();
 $("#contactForm").validate({
   errorClass: "red-focus",
   submitHandler : function(){
@@ -400,8 +401,11 @@ $("#contactForm").validate({
       $.post("/",form_data)
       .done(function(response){
         if (response.status == 1) {
-          alert( response.message );
-          // console.log(response.message);  
+          $("#contact-form").fadeOut(10);
+          $('#success-contact').show();
+            $('html, body').animate({
+                    scrollTop: $("#success-contact").offset().top - 300
+                }, 1000);
         }
         else{
           console.error(response.errors);
@@ -457,24 +461,24 @@ $(".phone").validate({
       // return false;
   });
   
-  editorInit();  
+  // editorInit();    
   // console.log(GLOBALS);
 });
 
-function editorInit(){
-    editor = new Quill ( $('#editor').get(0),{
-      placeholder: 'Compose your thought...',
-      modules: {
-        'toolbar': '#snow-toolbar',
-      },
-      theme: 'snow'
-  });
+// function editorInit(){
+//     editor = new Quill ( $('#editor').get(0),{
+//       placeholder: 'Compose your thought...',
+//       modules: {
+//         'toolbar': '#snow-toolbar',
+//       },
+//       theme: 'snow'
+//   });
  
-    editor.on('text-change', function(delta,h) {      
-      var htm =  $('#editor').find("ql-editor").html();
-      // console.log('contents', htm);
-  });
-}
+//     editor.on('text-change', function(delta,h) {      
+//       var htm =  $('#editor').find("ql-editor").html();
+//       // console.log('contents', htm);
+//   });
+// }
 
 function setLocation(){
   if (navigator.geolocation) {
